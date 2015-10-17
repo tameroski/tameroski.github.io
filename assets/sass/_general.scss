@@ -1,0 +1,23 @@
+body{
+	font-family:$font-secondary;
+}
+
+h1, h2, h3, h4{
+	font-family:$font-main;
+}
+h1{
+	margin-bottom:$global-padding;
+}
+
+main{
+	padding: $global-padding;
+	background-color:$color-bg;
+}
+
+a,a:visited{
+	color:$color-link;
+	@include transition(all .2s ease-in);
+}
+a:hover{
+	color:$color-link-hover;
+}

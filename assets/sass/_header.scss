@@ -1,0 +1,38 @@
+header{
+	
+	padding: 0;
+
+	@include keyframes(blink) {
+		0% {
+			@include opacity(0);
+		}
+		50% {
+			@include opacity(1);
+		}
+		100% {
+			@include opacity(0);
+		}
+	}
+
+	.logo, nav{
+		display:inline-block;
+		height:$header-height;
+	}
+	.logo{
+		@include font-size(2);
+	}
+	.bar{
+		@include animation(blink 1s ease infinite);
+
+	}
+	nav{
+		@include font-size(1.5);
+		@include line-height(2);
+		float:right;
+		ul{
+			li{
+				display:inline;
+			}
+		}
+	}
+}

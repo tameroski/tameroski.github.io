@@ -1,0 +1,17 @@
+name: keybored.fr
+description:
+author:
+author_email:
+host: localhost
+port: 4000
+url: http://localhost:4000/
+baseurl: 
+
+highlighter: true
+
+exclude: 
+- assets/sass
+- README.md
+
+keep_files:
+- styles.scss
