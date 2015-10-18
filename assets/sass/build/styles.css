@@ -152,6 +152,7 @@ main::after {
 
 header {
   padding: 0;
+  height: 80px;
 }
 @-webkit-keyframes blink {
   0% {
@@ -183,11 +184,15 @@ header {
 }
 header .logo, header nav {
   display: inline-block;
-  height: 80px;
+  padding: 10px 0;
 }
 header .logo {
   font-size: 20px;
   font-size: 2rem;
+  border-top: 4px solid #333;
+  border-bottom: 4px solid #333;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
 }
 header .bar {
   -webkit-animation: blink 1s ease infinite;
@@ -202,6 +207,30 @@ header nav {
 }
 header nav ul li {
   display: inline;
+}
+
+#page ul {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+}
+#page ul::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+#page ul li {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+}
+#page ul li:last-child {
+  margin-right: 0;
+}
+#page ul li a {
+  font-family: "Source Sans Pro", sans-serif;
+  display: block;
 }
 
 /*# sourceMappingURL=styles.css.map */

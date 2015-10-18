@@ -1,0 +1,17 @@
+#page{
+
+	ul{
+
+		@include outer-container;
+
+		li{
+			@include span-columns(4);
+
+			a{
+				font-family:$font-main;
+				display:block;
+			}
+		}
+
+	}
+}
