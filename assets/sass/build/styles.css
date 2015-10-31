@@ -422,7 +422,7 @@ footer span {
 footer a, footer a:visited {
   color: #FFF;
 }
-footer a:hover, footer a:focus {
+footer a:hover, footer a:active {
   color: #BADA55;
 }
 
@@ -567,7 +567,7 @@ header nav ul li {
   display: block;
   text-decoration: none;
 }
-#page ul li a:hover, #page ul li a:focus {
+#page ul li a:hover, #page ul li a:active {
   background-color: #BADA55;
   color: #333;
 }
