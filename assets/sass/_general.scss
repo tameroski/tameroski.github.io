@@ -14,13 +14,17 @@ h1{
 main{
 	padding: $global-padding;
 	background-color:$color-bg;
+	
+	@include media($mobile) {
+		padding: $sub-padding;
+	}
 }
 
 a,a:visited{
 	color:$color-link;
 	@include transition(all .2s ease-in);
 }
-a:hover{
+a:hover,a:focus{
 	color:$color-link-hover;
 }
 
@@ -38,5 +42,8 @@ footer{
 
 	a,a:visited{
 		color:#FFF;
+	}
+	a:hover,a:focus{
+		color:$color-link-hover;
 	}
 }

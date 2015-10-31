@@ -33,7 +33,7 @@
 				display:block;
 				text-decoration:none;
 
-				&:hover{
+				&:hover,&:focus{
 					background-color:$color-link-hover;
 					color:$color-text-main;
 				}

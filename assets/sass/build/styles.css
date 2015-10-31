@@ -392,6 +392,11 @@ main {
   padding: 50px;
   background-color: #EEEEEE;
 }
+@media screen and (max-width: 640px) {
+  main {
+    padding: 20px;
+  }
+}
 
 a, a:visited {
   color: #111;
@@ -399,7 +404,7 @@ a, a:visited {
   transition: all 0.2s ease-in;
 }
 
-a:hover {
+a:hover, a:focus {
   color: #BADA55;
 }
 
@@ -416,6 +421,9 @@ footer span {
 }
 footer a, footer a:visited {
   color: #FFF;
+}
+footer a:hover, footer a:focus {
+  color: #BADA55;
 }
 
 main {
@@ -559,7 +567,7 @@ header nav ul li {
   display: block;
   text-decoration: none;
 }
-#page ul li a:hover {
+#page ul li a:hover, #page ul li a:focus {
   background-color: #BADA55;
   color: #333;
 }
