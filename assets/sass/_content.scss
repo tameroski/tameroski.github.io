@@ -1,5 +1,9 @@
 #page{
 
+	h1+p{
+		padding: $sub-padding 0 $global-padding 0;
+	}
+
 	ul{
 
 		@include outer-container;
@@ -7,11 +11,64 @@
 		li{
 			@include span-columns(4);
 
+			@include media($tablet) {
+				@include span-columns(4);
+			}
+
+			@include media($mobile) {
+				@include span-columns(4);
+			}
+
+			&:nth-child(odd){
+				background-color:$color-bg-list;
+			}
+
+			&:nth-child(even){
+				background-color:$color-bg-list-bis;
+			}
+
 			a{
 				font-family:$font-main;
+				padding: $sub-padding;
 				display:block;
+				text-decoration:none;
+
+				&:hover{
+					background-color:$color-link-hover;
+					color:$color-text-main;
+				}
+			}
+
+			h2{
+				font-weight:700;
+				text-transform:uppercase;
+				display:block;
+				padding-bottom: $sub-padding / 2;
+			}
+
+			.date{
+				color:lighten($color-text-main, 20%);
+				font-size:75%;
+				display:block;
+				padding-bottom: $sub-padding / 2;
+			}
+			
+			.excerpt{
 			}
 		}
 
+	}
+}
+
+#post{
+	h1{
+		margin-top:$sub-padding;
+	}
+
+	.date{
+		color:lighten($color-text-main, 20%);
+		font-size:75%;
+		display:block;
+		padding: 10px 0 $sub-padding 0;
 	}
 }

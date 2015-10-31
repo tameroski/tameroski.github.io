@@ -1,3 +1,6 @@
 main {
   @include outer-container;
 }
+footer{
+  @include outer-container;
+}

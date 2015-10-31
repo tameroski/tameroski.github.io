@@ -1,6 +1,7 @@
 header{
 	
-	padding: 0;
+	padding: 0 0 $sub-padding 0;
+
 	height:$header-height;
 
 	@include keyframes(blink) {
@@ -26,10 +27,14 @@ header{
 		border-bottom: 4px solid $color-text-main;
 		font-family:$font-main;
 		font-weight:bold;
+
+		a,a:hover,a:visited{
+			color:$color-text-main;
+			text-decoration: none;
+		}
 	}
 	.bar{
 		@include animation(blink 1s ease infinite);
-
 	}
 	nav{
 		@include font-size(1.5);

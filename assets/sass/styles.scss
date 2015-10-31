@@ -1,11 +1,13 @@
-@import "variables";
-
 @import "bourbon";
 @import "neat";
+
+@import "variables";
+
 @import "mixins";
 @import "fontello";
 
 @import "reset";
+@import "syntax";
 
 @import "general";
 @import "layout";

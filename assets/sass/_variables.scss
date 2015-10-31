@@ -1,6 +1,9 @@
 $color-bg:#EEEEEE;
 $color-text-main:#333;
 
+$color-bg-list:#CCC;
+$color-bg-list-bis:#DDD;
+
 $font-main:'Source Sans Pro', sans-serif;
 $font-secondary:'Playfair Display', serif;
 
@@ -11,3 +14,8 @@ $header-height:80px;
 $header-height-mobile:50px;
 
 $global-padding : 50px;
+$sub-padding : 20px;
+
+$tablet: new-breakpoint(max-width 960px 8);
+
+$mobile: new-breakpoint(max-width 640px 4);

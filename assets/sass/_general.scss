@@ -6,7 +6,9 @@ h1, h2, h3, h4{
 	font-family:$font-main;
 }
 h1{
-	margin-bottom:$global-padding;
+	font-size:130%;
+	font-weight:bold;
+	text-transform:uppercase;
 }
 
 main{
@@ -20,4 +22,21 @@ a,a:visited{
 }
 a:hover{
 	color:$color-link-hover;
+}
+
+footer{
+	font-family:$font-main;
+	background-color:#000;
+	text-align:center;
+	padding:5px 0;
+
+	span{
+		color:#FFF;
+		font-size:13px;
+		line-height:17px;
+	}
+
+	a,a:visited{
+		color:#FFF;
+	}
 }

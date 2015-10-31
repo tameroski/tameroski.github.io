@@ -3,13 +3,22 @@ layout: default
 title: Keybored.fr
 ---
 
-<h1>Développement Full Steak</h1>
+<h1>Full Steak Development</h1>
+
+<p>
+	Code snippets and other great tech discoveries in the wonderful world of web applications development.
+</p>
 
 <ul>
   {% for post in site.posts %}
     <li>
-      <a href="{{ post.url }}"><span class="date">{{ post.date | date_to_string }}</span> {{ post.title }}</a>
-      {{ post.excerpt }}
+    	<a href="{{ post.url }}">
+    		<h2>{{ post.title }}</h2>
+	    	<span class="date">{{ post.date | date_to_string }}</span>
+	      	<div class="excerpt">
+	      		{{ post.excerpt }}
+	      	</div>
+      	</a>
     </li>
   {% endfor %}
 </ul>
