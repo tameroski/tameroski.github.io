@@ -404,8 +404,11 @@ a, a:visited {
   transition: all 0.2s ease-in;
 }
 
-a:hover, a:focus {
+a:hover, a:active {
   color: #BADA55;
+  -webkit-tap-highlight-color: #BADA55;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
 }
 
 footer {

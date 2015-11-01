@@ -26,6 +26,10 @@ a,a:visited{
 }
 a:hover,a:active{
 	color:$color-link-hover;
+
+	-webkit-tap-highlight-color: $color-link-hover; 
+	-webkit-user-select: none; 
+	-webkit-touch-callout: none;
 }
 
 footer{
