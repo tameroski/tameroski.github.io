@@ -573,6 +573,9 @@ header nav ul li {
 #page ul li a:hover, #page ul li a:active {
   background-color: #BADA55;
   color: #333;
+  -webkit-tap-highlight-color: #BADA55;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
 }
 #page ul li h2 {
   font-weight: 700;

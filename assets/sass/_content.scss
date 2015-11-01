@@ -36,6 +36,10 @@
 				&:hover,&:active{
 					background-color:$color-link-hover;
 					color:$color-text-main;
+
+					-webkit-tap-highlight-color: $color-link-hover; 
+					-webkit-user-select: none; 
+					-webkit-touch-callout: none;
 				}
 			}
 
