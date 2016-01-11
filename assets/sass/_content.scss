@@ -9,6 +9,8 @@
 		@include outer-container;
 
 		li{
+			box-shadow: 2px 2px 1px #333;
+
 			@include span-columns(4);
 
 			@include media($tablet) {
@@ -74,5 +76,15 @@
 		font-size:75%;
 		display:block;
 		padding: 10px 0 $sub-padding 0;
+	}
+
+	p{
+		font-size: 1em;
+		line-height:1.3em;
+		padding-bottom: $sub-padding;
+
+		a{
+			font-weight:bold;
+		}
 	}
 }
