@@ -43,3 +43,4 @@ $query-> set('orderby', array(
 ```
 
 Too bad this is not documented in the [Codex](http://codex.wordpress.org/Class_Reference/WP_Meta_Query) yet. I might try to add it myself later ;)
+
