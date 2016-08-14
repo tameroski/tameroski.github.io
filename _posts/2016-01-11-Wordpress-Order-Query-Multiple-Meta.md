@@ -9,12 +9,14 @@ Ordering things with a Wordpress query is usually quite simple. Let's say you ha
 
 Let's say you want to order books by page counts, then by title. You only have to add an 'orderby' parameter to the query :
 
-```php?start_inline=1
+```php
+<?php
 $query-> set('orderby', array(
 	'meta_value_num' => 'DESC', 
 	'title' => 'ASC',
 ));
 $query-> set('meta_key', 'page_count');
+?>
 ```
 
 Now let's add another meta field to 'Books' : we want to store the word count this time. How can we order our books by page count, word count, then title ?
@@ -22,7 +24,8 @@ Unfortunately, i figured out the 'meta_key' and 'meta_value_num' parameters are 
 
 I finally came across that [Wordpress Trac entry](https://core.trac.wordpress.org/ticket/31045), just to discover that Wordpress was patched in 4.2 with what will help us here. Finally, you just have to use meta_queries, and give them a key name. Then use these key names in an 'orderby' parameter. Voilà !
 
-```php?start_inline=1
+```php
+<?php
 $query->set('meta_query', array(
 	'page_count' => array(
 		'key' => 'page_count',
@@ -40,6 +43,7 @@ $query-> set('orderby', array(
 	'word_count' => 'DESC', 
 	'title' => 'ASC',
 ));
+?>
 ```
 
 Too bad this is not documented in the [Codex](http://codex.wordpress.org/Class_Reference/WP_Meta_Query) yet. I might try to add it myself later ;)
