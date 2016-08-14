@@ -9,7 +9,7 @@ Ordering things with a Wordpress query is usually quite simple. Let's say you ha
 
 Let's say you want to order books by page counts, then by title. You only have to add an 'orderby' parameter to the query :
 
-```php5
+```php
 $query-> set('orderby', array(
 	'meta_value_num' => 'DESC', 
 	'title' => 'ASC',
@@ -22,7 +22,7 @@ Unfortunately, i figured out the 'meta_key' and 'meta_value_num' parameters are 
 
 I finally came across that [Wordpress Trac entry](https://core.trac.wordpress.org/ticket/31045), just to discover that Wordpress was patched in 4.2 with what will help us here. Finally, you just have to use meta_queries, and give them a key name. Then use these key names in an 'orderby' parameter. Voilà !
 
-```php5
+```php
 $query->set('meta_query', array(
 	'page_count' => array(
 		'key' => 'page_count',
