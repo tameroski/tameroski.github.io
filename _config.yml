@@ -7,7 +7,7 @@ port: 4000
 url: http://www.keybored.fr/
 baseurl: 
 
-#highlighter: pygments
+highlighter: rouge
 
 exclude: 
 - assets/sass
