@@ -7,9 +7,11 @@ port: 4000
 url: http://www.keybored.fr/
 baseurl: 
 
+highlighter: rouge
 markdown: kramdown
 kramdown:
   input: GFM
+  auto_ids: true
   syntax_highlighter: rouge
 
 exclude: 
