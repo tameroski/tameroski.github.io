@@ -8,7 +8,9 @@ url: http://www.keybored.fr/
 baseurl: 
 
 markdown: kramdown
-highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 exclude: 
 - assets/sass
