@@ -14,9 +14,20 @@ But when it comes to introduce a few PHP in a static site, like it's often the c
 
 So for those cases, i was still looking for alternatives. Bolt, a CMS i really love, was one of them, but it's a bit too much to have a whole backend if i don't really need one. So i was thinking of Sylex or Laravel for a long time for all this, and finally decided to give the latter a try.
 
+What's intersting with Laravel 5 is that it comes with Elexir, an addon which deals with preprocessing stuff like Sass (or Less or whatever you want) and Coffeescript. It's based on Gulp, which makes it even more interesting for me as i only worked with Grunt up to now.
+
+So let's dig into making a simple site using all this.
+
+First let's create the 'laravel-test' project using composer :
+
+```
 composer create-project "laravel/laravel:5.*" laravel-test
 cd laravel-test/
-php artisan serve &
+```
+
+Then run the server :
+
+`php artisan serve &`
 
 Template layout
 ...
