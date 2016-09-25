@@ -78,7 +78,15 @@ Oh, and simply add the production parameter if you want minified assets in the e
 Now we need to build our a generic layout template for our website's pages. Let's create a layout.pug file in our new resources/assets/pug folder with this content :
 
 Template layout
-...
+```
+html
+	include includes/head
+	body 
+		include includes/header
+
+		main
+			|@yield('content')
+```
 
 route.php in app/Http/
 
