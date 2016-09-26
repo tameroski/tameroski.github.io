@@ -27,7 +27,7 @@ There you'll see a quite standard MVC app directory tree. Routing stuff and cont
 
 Now let's run the server :
 
-`php artisan serve &`
+`php artisan serve`
 
 When browsing at localhost:8000/ (the default host and port) you should have a page like this : 
 
@@ -45,7 +45,11 @@ Then you're good to go with laravel-elixir-pug for your local project :
 
 `npm install --save laravel-elixir-pug pug`
 
-Now in the project's gulp file (gulpfile.js), add the package dependency at the top and it's settings in the mix section like this : 
+And don't forget to install Elixir's node dependencies :
+
+`npm install`
+
+Finally, in the project's gulp file (gulpfile.js), add the laravel-elixir-pug dependency at the top and its settings in the mix section like this : 
 
 ```
 require('laravel-elixir-pug');
@@ -63,7 +67,7 @@ elixir(function(mix) {
 });
 ```
 
-We're now ready to write our pug template files in the resources/assets/pug/ directory. They'll be compiled into blade files (Laravel template files) in resources/views/.
+We're now ready to write our pug template files in the resources/assets/pug/ directory. They'll be automatically compiled into blade files (Laravel template files) in resources/views/ along with the sass files.
 
 Let's run Elixir's gulp task and go on :
 
@@ -75,21 +79,93 @@ Oh, and simply add the production parameter if you want minified assets in the e
 
 # Templates & routing
 
-Now we need to build our a generic layout template for our website's pages. Let's create a layout.pug file in our new resources/assets/pug folder with this content :
+Now we need to build a generic layout template for our website's pages. Let's create a layout.pug file in our new resources/assets/pug folder :
 
-Template layout
 ```
 html
-	include includes/head
-	body 
-		include includes/header
+	head
+		title My Laravel Site
 
-		main
-			|@yield('content')
+		link(rel="stylesheet" href="css/app.css")
+
+	body
+		//- Menu
+		nav
+			ul
+				li
+					a(href="{{ URL::route('home') }}") Home
+				li
+					a(href="{{ URL::route('contact') }}") Contact
+
+		//- Main content
+		main @yield('content')
 ```
 
-route.php in app/Http/
+If you're familiar with Pug, no big surprise here, except maybe for the last line. The 'yield' directive tells Laravel to replace a portion of content (called section) in a template.
 
+As you can see, there are 2 links in the menu, each one having its own named route. So now let's create these routes. In app/Http/routes.php, replace the default welcome route by : 
+
+```
 Route::get('/', function () {
-    return view('layout');
-});
+    return view('home');
+})->name('home');
+
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
+```
+
+Last but not least, let's create 2 templates for those routes, each one extending our generic layout template. Here is the 'home' template code for exemple : 
+
+```
+|@extends("layout") {{-- This template is extending the "layout" one --}}
+|@section("content") {{-- This section will replace the yield('content') --}}
+h1 Laravel test site
+p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pellentesque posuere nunc, at laoreet augue. Donec ultricies eu mi sit amet dictum. Maecenas ut posuere ligula. Donec ut mauris vitae orci faucibus suscipit ac et dui. Quisque sed massa non tortor euismod accumsan.
+|@stop {{-- End of the section --}}
+```
+
+Note that the '|' is here for telling Pug to keep a line as is. 
+
+Create another template of the same kind for the contact page for now, and add some Sass magic to check that everything's is OK with gulp : 
+
+```
+$color: #BADA55;
+$width: 960px;
+
+@mixin boxed {
+	width:$width;
+	margin:0 auto;
+}
+
+body{
+	font-family: Helvetica, Arial, Sans-serif;
+	background: $color;
+}
+
+h1{
+	text-transform: uppercase;
+}
+
+nav{
+	@include boxed;
+
+	ul{
+		padding:0;
+		margin:0;
+		list-style:none;
+
+		li{
+			display:inline-block;
+		}
+	}
+}
+
+main{
+	@include boxed;
+}
+```
+
+Voilà ! You should see something like this in your browser now : 
+
+![Voilà!](/assets/images/posts/voila.png)
