@@ -112,11 +112,12 @@ table {
   border-spacing: 0;
 }
 
-.highlight {
+.highlighter-rouge {
   background: #ffffff;
-  padding: 0;
+  padding: 10px;
   font-family: monospace;
   margin-bottom: 20px;
+  color: #eeffdd;
   /* Comment */
   /* Error */
   /* Keyword */
@@ -179,16 +180,16 @@ table {
   /* Generic.Deleted & Diff Deleted */
   /* Generic.Inserted & Diff Inserted */
 }
-.highlight .lineno {
+.highlighter-rouge .lineno {
   font-style: italic;
   color: #AAA;
   padding-right: 10px;
 }
-.highlight, .highlight .hll, .highlight pre, .highlight code {
+.highlighter-rouge, .highlighter-rouge .hll, .highlighter-rouge pre, .highlighter-rouge code {
   background-color: #272822 !important;
   border: none;
 }
-.highlight pre {
+.highlighter-rouge pre {
   position: relative;
   margin: 0;
   padding: 1.3em;
@@ -199,197 +200,197 @@ table {
   word-break: inherit;
   word-wrap: inherit;
 }
-.highlight pre, .highlight pre code {
+.highlighter-rouge pre, .highlighter-rouge pre code {
   color: #eeffdd;
 }
-.highlight pre code {
+.highlighter-rouge pre code {
   white-space: pre;
   padding: 0 !important;
 }
-.highlight pre code * {
+.highlighter-rouge pre code * {
   white-space: nowrap;
 }
-.highlight .c {
+.highlighter-rouge .c {
   color: #75715e;
 }
-.highlight .err {
+.highlighter-rouge .err {
   color: #f2f1f2;
 }
-.highlight .k {
+.highlighter-rouge .k {
   color: #66d9ef;
 }
-.highlight .l {
+.highlighter-rouge .l {
   color: #ae81ff;
 }
-.highlight .n {
+.highlighter-rouge .n {
   color: #f8f8f2;
 }
-.highlight .o {
+.highlighter-rouge .o {
   color: #f92672;
 }
-.highlight .p {
+.highlighter-rouge .p {
   color: #f8f8f2;
 }
-.highlight .cm {
+.highlighter-rouge .cm {
   color: #75715e;
 }
-.highlight .cp {
+.highlighter-rouge .cp {
   color: #75715e;
 }
-.highlight .c1 {
+.highlighter-rouge .c1 {
   color: #75715e;
 }
-.highlight .cs {
+.highlighter-rouge .cs {
   color: #75715e;
 }
-.highlight .ge {
+.highlighter-rouge .ge {
   font-style: italic;
 }
-.highlight .gs {
+.highlighter-rouge .gs {
   font-weight: bold;
 }
-.highlight .kc {
+.highlighter-rouge .kc {
   color: #66d9ef;
 }
-.highlight .kd {
+.highlighter-rouge .kd {
   color: #66d9ef;
 }
-.highlight .kn {
+.highlighter-rouge .kn {
   color: #f92672;
 }
-.highlight .kp {
+.highlighter-rouge .kp {
   color: #66d9ef;
 }
-.highlight .kr {
+.highlighter-rouge .kr {
   color: #66d9ef;
 }
-.highlight .kt {
+.highlighter-rouge .kt {
   color: #66d9ef;
 }
-.highlight .ld {
+.highlighter-rouge .ld {
   color: #e6db74;
 }
-.highlight .m {
+.highlighter-rouge .m {
   color: #ae81ff;
 }
-.highlight .s {
+.highlighter-rouge .s {
   color: #e6db74;
 }
-.highlight .na {
+.highlighter-rouge .na {
   color: #a6e22e;
 }
-.highlight .nb {
+.highlighter-rouge .nb {
   color: #f8f8f2;
 }
-.highlight .nc {
+.highlighter-rouge .nc {
   color: #a6e22e;
 }
-.highlight .no {
+.highlighter-rouge .no {
   color: #66d9ef;
 }
-.highlight .nd {
+.highlighter-rouge .nd {
   color: #a6e22e;
 }
-.highlight .ni {
+.highlighter-rouge .ni {
   color: #f8f8f2;
 }
-.highlight .ne {
+.highlighter-rouge .ne {
   color: #a6e22e;
 }
-.highlight .nf {
+.highlighter-rouge .nf {
   color: #a6e22e;
 }
-.highlight .nl {
+.highlighter-rouge .nl {
   color: #f8f8f2;
 }
-.highlight .nn {
+.highlighter-rouge .nn {
   color: #f8f8f2;
 }
-.highlight .nx {
+.highlighter-rouge .nx {
   color: #a6e22e;
 }
-.highlight .py {
+.highlighter-rouge .py {
   color: #f8f8f2;
 }
-.highlight .nt {
+.highlighter-rouge .nt {
   color: #f92672;
 }
-.highlight .nv {
+.highlighter-rouge .nv {
   color: #f8f8f2;
 }
-.highlight .ow {
+.highlighter-rouge .ow {
   color: #f92672;
 }
-.highlight .w {
+.highlighter-rouge .w {
   color: #f8f8f2;
 }
-.highlight .mf {
+.highlighter-rouge .mf {
   color: #ae81ff;
 }
-.highlight .mh {
+.highlighter-rouge .mh {
   color: #ae81ff;
 }
-.highlight .mi {
+.highlighter-rouge .mi {
   color: #ae81ff;
 }
-.highlight .mo {
+.highlighter-rouge .mo {
   color: #ae81ff;
 }
-.highlight .sb {
+.highlighter-rouge .sb {
   color: #e6db74;
 }
-.highlight .sc {
+.highlighter-rouge .sc {
   color: #e6db74;
 }
-.highlight .sd {
+.highlighter-rouge .sd {
   color: #e6db74;
 }
-.highlight .s2 {
+.highlighter-rouge .s2 {
   color: #e6db74;
 }
-.highlight .se {
+.highlighter-rouge .se {
   color: #ae81ff;
 }
-.highlight .sh {
+.highlighter-rouge .sh {
   color: #e6db74;
 }
-.highlight .si {
+.highlighter-rouge .si {
   color: #e6db74;
 }
-.highlight .sx {
+.highlighter-rouge .sx {
   color: #e6db74;
 }
-.highlight .sr {
+.highlighter-rouge .sr {
   color: #e6db74;
 }
-.highlight .s1 {
+.highlighter-rouge .s1 {
   color: #e6db74;
 }
-.highlight .ss {
+.highlighter-rouge .ss {
   color: #e6db74;
 }
-.highlight .bp {
+.highlighter-rouge .bp {
   color: #f8f8f2;
 }
-.highlight .vc {
+.highlighter-rouge .vc {
   color: #f8f8f2;
 }
-.highlight .vg {
+.highlighter-rouge .vg {
   color: #f8f8f2;
 }
-.highlight .vi {
+.highlighter-rouge .vi {
   color: #f8f8f2;
 }
-.highlight .il {
+.highlighter-rouge .il {
   color: #ae81ff;
 }
-.highlight .gu {
+.highlighter-rouge .gu {
   color: #75715e;
 }
-.highlight .gd {
+.highlighter-rouge .gd {
   color: #f92672;
 }
-.highlight .gi {
+.highlighter-rouge .gi {
   color: #a6e22e;
 }
 
@@ -548,6 +549,7 @@ header nav ul li {
 }
 #page ul li {
   box-shadow: 2px 2px 1px #333;
+  margin-bottom: 15px;
   float: left;
   display: block;
   margin-right: 2.35765%;
@@ -555,6 +557,12 @@ header nav ul li {
 }
 #page ul li:last-child {
   margin-right: 0;
+}
+#page ul li:nth-child(3n) {
+  margin-right: 0;
+}
+#page ul li:nth-child(3n+1) {
+  clear: left;
 }
 @media screen and (max-width: 960px) {
   #page ul li {
@@ -566,6 +574,12 @@ header nav ul li {
   #page ul li:last-child {
     margin-right: 0;
   }
+  #page ul li:nth-child(2n) {
+    margin-right: 0;
+  }
+  #page ul li:nth-child(2n+1) {
+    clear: left;
+  }
 }
 @media screen and (max-width: 640px) {
   #page ul li {
@@ -573,8 +587,12 @@ header nav ul li {
     display: block;
     margin-right: 7.42297%;
     width: 100%;
+    margin-bottom: 0;
   }
   #page ul li:last-child {
+    margin-right: 0;
+  }
+  #page ul li:nth-child(n) {
     margin-right: 0;
   }
 }
@@ -613,6 +631,11 @@ header nav ul li {
 #post h1 {
   margin-top: 20px;
 }
+#post h2 {
+  font-size: 110%;
+  font-weight: bold;
+  padding: 40px 0 20px 0;
+}
 #post .date {
   color: #666666;
   font-size: 75%;
@@ -626,6 +649,11 @@ header nav ul li {
 }
 #post p a {
   font-weight: bold;
+}
+#post p img {
+  max-width: 80%;
+  margin: 0 auto;
+  display: block;
 }
 
 /*# sourceMappingURL=styles.css.map */
