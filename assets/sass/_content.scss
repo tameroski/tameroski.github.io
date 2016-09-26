@@ -10,15 +10,20 @@
 
 		li{
 			box-shadow: 2px 2px 1px #333;
+			margin-bottom:15px;
 
 			@include span-columns(4);
+			@include omega(3n);
 
 			@include media($tablet) {
 				@include span-columns(4);
+				@include omega(2n);
 			}
 
 			@include media($mobile) {
 				@include span-columns(4);
+				@include omega(n);
+				margin-bottom:0;
 			}
 
 			&:nth-child(odd){
