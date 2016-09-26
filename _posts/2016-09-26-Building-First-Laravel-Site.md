@@ -81,7 +81,7 @@ Oh, and simply add the production parameter if you want minified assets in the e
 
 Now we need to build a generic layout template for our website's pages. Let's create a layout.pug file in our new resources/assets/pug folder :
 
-```jade
+```html
 html
 	head
 		title My Laravel Site
@@ -117,7 +117,7 @@ Route::get('/contact', function () {
 
 Last but not least, let's create 2 templates for those routes, each one extending our generic layout template. Here is the 'home' template code for exemple : 
 
-```jade
+```html
 |@extends("layout") {{-- This template is extending the "layout" one --}}
 |@section("content") {{-- This section will replace the yield('content') --}}
 h1 Laravel test site
