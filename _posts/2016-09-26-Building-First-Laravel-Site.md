@@ -169,3 +169,5 @@ main{
 Voilà ! You should see something like this in your browser now : 
 
 ![Voilà!](/assets/images/posts/voila.png)
+
+Finally, using your favorite tools, you can now unleash all the power of Laravel components for whatever server-side feature you want on your site, and keeping things organized in controllers, views, etc. I will probably make a part 2 for this article where this will be covered.
