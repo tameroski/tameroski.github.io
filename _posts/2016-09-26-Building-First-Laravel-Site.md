@@ -1,5 +1,5 @@
 --- 
-title: '[PHP] Building your first basic Laravel 5 site'
+title: '[Laravel] Building your first basic Laravel 5 site'
 layout: post
 summary: First steps into Laravel 5 basics
 keywords: 'Laravel, PHP, Sass'
