@@ -18,7 +18,7 @@ So let's dig into making a simple site using all this.
 
 First let's create the 'laravel-test' project using composer :
 
-```php
+```
 composer create-project "laravel/laravel:5.*" laravel-test
 cd laravel-test/
 ```
