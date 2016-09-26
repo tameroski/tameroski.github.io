@@ -76,6 +76,13 @@
 		margin-top:$sub-padding;
 	}
 
+	h2{
+		font-size: 110%;
+		font-weight: bold;
+
+		padding: $sub-padding*2 0 $sub-padding 0;
+	}
+
 	.date{
 		color:lighten($color-text-main, 20%);
 		font-size:75%;
