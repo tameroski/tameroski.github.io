@@ -51,7 +51,7 @@ And don't forget to install Elixir's node dependencies :
 
 Finally, in the project's gulp file (gulpfile.js), add the laravel-elixir-pug dependency at the top and its settings in the mix section like this : 
 
-```
+```javascript
 require('laravel-elixir-pug');
 
 elixir(function(mix) {
@@ -81,7 +81,7 @@ Oh, and simply add the production parameter if you want minified assets in the e
 
 Now we need to build a generic layout template for our website's pages. Let's create a layout.pug file in our new resources/assets/pug folder :
 
-```
+```jade
 html
 	head
 		title My Laravel Site
@@ -105,7 +105,7 @@ If you're familiar with Pug, no big surprise here, except maybe for the last lin
 
 As you can see, there are 2 links in the menu, each one having its own named route. So now let's create these routes. In app/Http/routes.php, replace the default welcome route by : 
 
-```
+```php
 Route::get('/', function () {
     return view('home');
 })->name('home');
@@ -117,7 +117,7 @@ Route::get('/contact', function () {
 
 Last but not least, let's create 2 templates for those routes, each one extending our generic layout template. Here is the 'home' template code for exemple : 
 
-```
+```jade
 |@extends("layout") {{-- This template is extending the "layout" one --}}
 |@section("content") {{-- This section will replace the yield('content') --}}
 h1 Laravel test site
@@ -129,7 +129,7 @@ Note that the '|' is here for telling Pug to keep a line as is.
 
 Create another template of the same kind for the contact page for now, and add some Sass magic to check that everything's is OK with gulp : 
 
-```
+```sass
 $color: #BADA55;
 $width: 960px;
 
