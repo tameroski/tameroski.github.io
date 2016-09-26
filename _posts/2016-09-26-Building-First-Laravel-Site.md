@@ -33,7 +33,7 @@ When browsing at localhost:8000/ (the default host and port) you should have a p
 
 ![Laravel starting screen](/assets/images/posts/starting-screen.png)
 
-Next, we'll install the laravel-elixir-pug package so we can work our templates with Pug (formerly known as Jade). By the time i'm writing, you'll need to have the latest version of npm to do so (because of a peer dependency issue with pug@2.0.0 still in beta version). 
+Next, we'll install the [laravel-elixir-pug](https://github.com/mrkmg/laravel-elixir-pug) package so we can work our templates with Pug (formerly known as Jade). By the time i'm writing, you'll need to have the latest version of npm to do so (because of a peer dependency issue with pug@2.0.0 still in beta version). 
 
 `npm install npm -g`
 
