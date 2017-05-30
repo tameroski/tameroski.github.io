@@ -14,7 +14,9 @@ What's interesting with Laravel 5 is that it comes with Elexir, a module which d
 
 So let's dig into making a simple site using all this.
 
-# Installation
+
+## Installation
+{: .title}
 
 First let's create the 'laravel-test' project using composer :
 
@@ -77,7 +79,8 @@ Oh, and simply add the production parameter if you want minified assets in the e
 
 `gulp watch --production`
 
-# Templates & routing
+## Templates & routing
+{: .title}
 
 Now we need to build a generic layout template for our website's pages. Let's create a layout.pug file in our new resources/assets/pug folder :
 

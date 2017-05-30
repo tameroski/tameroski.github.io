@@ -4,7 +4,6 @@
     <head>
         <meta charset="utf-8"/>
         <title>{% if page.title %} {{ page.title }} | {% endif %} {{ site.name }}</title>
-        <link rel="stylesheet" href="/styles.css" />
         <meta name="description" content="{{site.description}}"/>
         <meta name="author" content="{{site.author}}"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,6 +23,8 @@
         <meta name="msapplication-TileColor" content="#CCCCCC" />
         <meta name="msapplication-TileImage" content="http://www.keybored.fr/mstile-144x144.png" />
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Playfair+Display:400,700' rel='stylesheet' type='text/css'>
     </head>
 
@@ -31,16 +32,14 @@
 
         <main>
 
-            <header>
-                <div class="logo">
-                    <a href="http://keybored.fr">
+            <header class="nav container">
+                <div class="logo nav-left">
+                    <a href="http://keybored.fr" class="nav-item">
                         KEY<span class="bar">_</span>BORED
                     </a>
                 </div>
-                <nav>
-                    <ul>
-                        <li><a href="http://twitter.com/keybored_fr" title="twitter.com/keybored_fr"><i class="icon-twitter"></i></a></li>
-                        <li><a href="http://github.com/tameroski" title="github.com/tameroski"><i class="icon-github-circled"></i></a></li>
-                    </ul>
+                <div class="nav-right">
+                    <a href="http://twitter.com/keybored_fr" title="twitter.com/keybored_fr" class="nav-item"><span class="icon"><i class="fa fa-twitter"></i></span></a>
+                    <a href="http://github.com/tameroski" title="github.com/tameroski" class="nav-item"><span class="icon"><i class="fa fa-github"></i></span></a>
                 </nav>
             </header>

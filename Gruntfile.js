@@ -1,6 +1,5 @@
-var siteURL = "localhost:4000/";
+var siteURL = "localhost:4000";
 
-'use strict';
 module.exports = function(grunt) {
 
     // load all grunt tasks matching the `grunt-*` pattern
@@ -25,10 +24,10 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     style: 'expanded',
-                    loadPath: require('node-neat').includePaths,
+                    loadPath: 'node_modules/bulma/bulma.sass'
                 },
                 files: {
-                    'assets/sass/build/styles.css': 'assets/sass/styles.scss',
+                    'assets/sass/build/styles.css': 'assets/sass/styles.scss'
                 }
             }
         },
@@ -44,7 +43,7 @@ module.exports = function(grunt) {
                 flatten: true,
                 src: ['assets/sass/build/*.css'],
                 dest: 'assets/sass/build'
-            },
+            }
         },
 
         // css minify
@@ -57,7 +56,7 @@ module.exports = function(grunt) {
                   'styles.css': ['assets/sass/build/*.css'],
                   '_site/styles.css': ['assets/sass/build/*.css']
                 }
-            },
+            }
         },
 
         // uglify to concat, minify, and make source maps
@@ -71,10 +70,10 @@ module.exports = function(grunt) {
             build: {
                 files: {
                     'app.min.js' : [
-                        'assets/js/**/*.js',
+                        'assets/js/**/*.js'
                     ]
                 }
-            },
+            }
         },
 
         // sync with browsers
@@ -86,7 +85,7 @@ module.exports = function(grunt) {
                 proxy: siteURL,
                 watchTask: true,
                 server: false,
-                browser: "google chrome",
+                browser: "google chrome"
             }
         },
 
@@ -114,7 +113,7 @@ module.exports = function(grunt) {
         },
 
         // Task for cleaning the build dir
-        clean: ["assets/sass/build"],
+        clean: ["assets/sass/build"]
 
     });
 

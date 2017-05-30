@@ -3,17 +3,28 @@
 
 {% include header.html %}
 
-<div id="post" class="content">
+<div id="post">
 
-	<h1>{{ page.title }}</h1>
+	<section class="hero is-primary is-bold">
+	  <div class="hero-body">
+	    <div class="container">
+	      <h1 class="title">
+	        {{ page.title }}
+	      </h1>
+	      <p class="subtitle">{{ page.date | date_to_string }}</p>
+	    </div>
+	  </div>
+	</section>
 
-	<p class="meta date">{{ page.date | date_to_string }}</p>
-
-	{{ content }}
+	<section class="section">
+		<div class="container content">
+			{{content}}
+		</div>
+	</section>
 
 </div>
 
-<div id="disqus_thread"></div>
+<div id="disqus_thread" class="container"></div>
 <script>
 var disqus_config = function () {
 this.page.url = '{{site.url}}{{page.url}}'; // Replace PAGE_URL with your page's canonical URL variable

@@ -3,22 +3,35 @@ layout: default
 title: Keybored.fr
 ---
 
-<h1>Full Steak Development</h1>
+<section class="hero is-primary is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Full Steak Development
+      </h1>
+      <h2 class="subtitle">
+        Code snippets and other great tech discoveries in the wonderful world of web & mobile application development.
+      </h2>
+    </div>
+  </div>
+</section>
 
-<p>
-	Code snippets and other great tech discoveries in the wonderful world of web & mobile application development.
-</p>
-
-<ul>
-  {% for post in site.posts %}
-    <li>
-    	<a href="{{ post.url }}">
-    		<h2>{{ post.title }}</h2>
-	    	<span class="date">{{ post.date | date_to_string }}</span>
-	      	<div class="excerpt">
-	      		{{ post.summary }}
-	      	</div>
-      	</a>
-    </li>
-  {% endfor %}
-</ul>
+<section class="section">`
+  <div class="container">
+    <div class="columns is-multiline">
+      {% for post in site.posts %}
+        <div class="column is-one-third">
+          <article class="box">
+          	<a href="{{ post.url }}">
+          		<h2 class="title">{{ post.title }}</h2>
+              <div class="subtitle">
+                {{ post.summary }}
+              </div>
+              <span class="tag is-info">{{ post.date | date_to_string }}</span>
+          	</a>
+          </article>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
