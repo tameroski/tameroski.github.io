@@ -18,20 +18,28 @@ title: Keybored.fr
 
 <section class="section">
   <div class="container">
-    <div class="columns is-multiline">
-      {% for post in site.posts %}
-        <div class="column is-one-third">
-          <article class="box">
-          	<a href="{{ post.url }}">
-          		<h2 class="title">{{ post.title }}</h2>
-              <div class="subtitle">
-                {{ post.summary }}
-              </div>
-              <span class="tag is-info">{{ post.date | date_to_string }}</span>
-          	</a>
-          </article>
+    <div class="columns">
+      <div class="column is-8">
+        <div class="columns is-multiline">
+          {% for post in site.posts %}
+            <div class="column is-one-third">
+              <article class="box">
+                <a href="{{ post.url }}">
+                  <h2 class="title">{{ post.title }}</h2>
+                  <div class="subtitle">
+                    {{ post.summary }}
+                  </div>
+                  <span class="tag is-info">{{ post.date | date_to_string }}</span>
+                </a>
+              </article>
+            </div>
+          {% endfor %}
         </div>
-      {% endfor %}
+        <div class="column is-4">
+          <h3>Crypto Tip Jar</h3>
+          <p>ETH : 0x6b4b5a577c216Dd82540FeE63259E89C5039BE60</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
